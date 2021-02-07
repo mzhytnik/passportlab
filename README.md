@@ -15,7 +15,7 @@ JWT_SECRET - secret string for signing JWT tokens
 GOOGLE_CLIENT_ID - client_id from google dev credentials
 GOOGLE_CLIENT_SECRET - client_secret from google dev credentials
 GOOGLE_CALLBACK_URL - callback_url, in this case should be set to /auth/google/callback can be configured to something else in google strategy
-HOST - by default - http://localhost:3000
+HOST - by default - http://localhost:3000, also don' forget to update hosts in index.html/profile.html
 ```
 
 ## Project structure
