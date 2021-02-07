@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login with Google Example</title>
+  <meta name="description" content="Login with Google Example for iTechArt JS Lab">
+  <meta name="author" content="M. Zhytnik">
+</head>
+<body>
+  <button id="login">Login with Google</button>
+  <script>
+    // we take token from query and store it in localstorage, then redirect user to his "profile"
+    // idea here is to have a "honeypot" on frontend which will handle token saving and will redirect user to a proper page afterwards
+    const token = window.location.search.replace('?token=', '')
+    if (token) {
+      localStorage.setItem('token', token)
+      window.location.href = 'http://localhost:3000/profile'
+    }
+    const loginBtn = document.getElementById('login')
+    loginBtn.addEventListener('click', () => {
+      window.location.href = 'http://localhost:3000/auth/google'
+    })
+  </script>
+</body>
+</html>

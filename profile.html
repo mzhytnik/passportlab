@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login with Google Example - Profile</title>
+  <meta name="description" content="Login with Google Example - Profile for iTechArt JS Lab">
+  <meta name="author" content="M. Zhytnik">
+</head>
+<body>
+  <p>User is logged in, token:</p>
+  <p id="tokenBlock"></p>
+  <button id="clear">Clear storage</button>
+  <script>
+    // Improvised "profile"
+    // this page should only be accessible if token is stored in localstorage, otherwise user should be redirected back to login
+    const token = localStorage.getItem('token')
+    if (token) {
+      const tokenBlock = document.getElementById('tokenBlock')
+      tokenBlock.innerHTML = token
+    } else {
+      window.location.href = 'http://localhost:3000/auth'
+    }
+    const clear = document.getElementById('clear')
+    clear.addEventListener('click', () => {
+      localStorage.clear()
+      alert('localStorage is cleared')
+    })
+  </script>
+</body>
+</html>
