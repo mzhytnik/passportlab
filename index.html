@@ -14,11 +14,11 @@
     const token = window.location.search.replace('?token=', '')
     if (token) {
       localStorage.setItem('token', token)
-      window.location.href = 'http://localhost:3000/profile'
+      window.location.href = 'https://passportjab.herokuapp.com/profile'
     }
     const loginBtn = document.getElementById('login')
     loginBtn.addEventListener('click', () => {
-      window.location.href = 'http://localhost:3000/auth/google'
+      window.location.href = 'https://passportjab.herokuapp.com/auth/google'
     })
   </script>
 </body>
