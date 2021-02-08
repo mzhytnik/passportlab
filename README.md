@@ -1,6 +1,8 @@
 # PassportJS example project
 
  Sample project containing examples of using PassportJS with Native (login+password) and Federated (google) authentication
+ 
+ deployed as is to https://passportlab.herokuapp.com/auth
 
 ## Running locally
 ```
