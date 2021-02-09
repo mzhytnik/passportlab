@@ -5,6 +5,7 @@
  deployed as is to https://passportlab.herokuapp.com/auth
 
 ## Running locally
+**important:** use Node v12.x.x, won't work with 14.x.x because Sequelize 5 doesn't support 14.x.x properly
 ```
 npm install
 node index
